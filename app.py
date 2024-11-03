@@ -92,6 +92,8 @@ def login():
                 return redirect(url_for('interviewer_dashboard'))
             elif user['role'] == 'Candidate':
                 return redirect(url_for('candidate_dashboard'))
+            elif user['role'] == 'Recruiter':
+                return redirect(url_for('recruiter_dashboard'))
             else:
                 flash('Role not recognized.', 'danger')
                 return redirect(url_for('login'))
